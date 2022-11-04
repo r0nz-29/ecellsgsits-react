@@ -1,8 +1,13 @@
 import {cards, director, faculty, founders} from "./data";
 import "./index.css";
 import {Col, Container, Row} from "react-bootstrap";
+import {useEffect} from "react";
 
 export default function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <br/>

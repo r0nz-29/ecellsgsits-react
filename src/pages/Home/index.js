@@ -2,8 +2,13 @@ import {INTRO_VIDEO} from "../../Utils/images";
 import {ADDRESS, highlights, OverallCoordinators} from "./data";
 import {Carousel} from "react-bootstrap";
 import "./index.css";
+import {useEffect} from "react";
 
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <IntroVideo/>

@@ -1,15 +1,19 @@
 import "./index.css";
 import {departments, OC, storeHeads} from "./data";
-import React from "react";
+import React, {useEffect} from "react";
 
 export default function Team() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <br/><br/><br/>
       <div className="outer-box">
         <div className="heading">
           <h2 className="text-center">
-            <span className="typewriter"><span>Team E-Cell</span></span>
+            <span className="typewriter"><span style={{overflowY: "hidden", scrollbarColor: 'transparent'}}>Team E-Cell</span></span>
           </h2>
           <hr/>
         </div>
