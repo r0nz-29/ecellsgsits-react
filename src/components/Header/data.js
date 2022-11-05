@@ -33,5 +33,5 @@ export const navs = [
   ["ESUMMIT", "/esummit"],
   ["SPONSORS", "/sponsors"],
   ["TEAM", "/team"],
-  ["CONTACT", "/contact"],
+  ["CONTACT", "/#contact"],
 ];

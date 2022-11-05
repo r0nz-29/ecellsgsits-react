@@ -20,11 +20,18 @@ import {Socials} from "../../components/Header";
 import {Carousel} from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css";
+import {useLocation} from "react-router-dom";
 
 export default function Home() {
+  const location = useLocation();
+
   useEffect(() => {
-    // window.scrollTo(0, 0);
-  }, []);
+    if (location.hash === "#contact") {
+      window.scrollTo(0, document.body.scrollHeight + 300);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location]);
 
   return (
     <>
@@ -131,9 +138,9 @@ function Highlights() {
                 <div className="item">
                   <img src={highlight.img}/>
                   <div className="caption">
-                    <h4 className="animated"  style={{fontSize: "32px"}} ><span
+                    <h4 className="animated" style={{fontSize: "32px"}}><span
                       className="name"> {highlight.name} </span><small> {highlight.id} </small></h4>
-                    <h5 className="animated pulse" style={{fontSize: "20px"}} > {highlight.tagline} </h5>
+                    <h5 className="animated pulse" style={{fontSize: "20px"}}> {highlight.tagline} </h5>
                   </div>
                 </div>
               </Carousel.Item>

@@ -82,7 +82,6 @@ function DeptHeads() {
             </Heading>
           </Center>
           <br/>
-          <br/>
           <Flex gap={4} justify="space-evenly">
             {dept.heads.map((head, i) => (
               <ProfileCard person={head} key={i} width="xs" borderRadius="xl"/>

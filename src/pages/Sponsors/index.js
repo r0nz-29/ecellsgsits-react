@@ -12,6 +12,10 @@ import {
   PP_MTCF, PP_ODE, PP_PE, PP_RM, PP_SG, PP_SM, PP_SW, PP_VI,
   PP_YD,
 } from "../../Utils/images";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+import {Box, Center, Flex, Heading, Image, VStack} from "@chakra-ui/react";
+import {FadingDivider} from "../About";
 
 export default function Sponsors() {
   useEffect(() => {
@@ -20,45 +24,62 @@ export default function Sponsors() {
 
   return (
     <div className="px-2 m-auto">
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <div className="container-fluid">
-        <div className="panel text-center inflate">
-          <h1 id="page-main-header">Our Sponsors</h1>
-        </div>
-        <hr/>
-        <div className="present-sponsor-head sponsor-head">
-          <h3 className="page-header inflate"> Present Sponsor </h3>
-          <div className="row">
-            <div className="card col-md-6 col-xl-12 present-sponsor">
-              <div className="card-content sponsor-view" data-toggle="modal" data-target=".SSIEdu" id="#SSI">
-                <div className="card-img PartnerLogo">
-                  <img className="card-img-top" src={P_SSI} alt="SSI" title="SSI"/>
-                </div>
-                <div className="card-body">
-                  <div className="text-center"><h4 className="card-title">SSI</h4></div>
-                </div>
-              </div>
-            </div>
+        <Center>
+          <Heading>
+            Our Sponsors
+          </Heading>
+        </Center>
+        <br/>
+        <FadingDivider/>
+        <Flex justify="space-evenly" alignItems="center">
+          <div className="present-sponsor-head sponsor-head">
+            <Center>
+              <Heading size="lg">
+                Present Sponsor
+              </Heading>
+            </Center>
+            <br/>
+            <Center>
+              <Box boxShadow="2xl" borderRadius="lg" p={4}>
+                <br/><br/><br/>
+                <Image src={P_SSI} alt="SSI" title="SSI" objectFit="cover"/>
+                <br/><br/><br/>
+                <Center>
+                  <Heading size="md">SSI</Heading>
+                </Center>
+              </Box>
+            </Center>
           </div>
-        </div>
-        <div className="knowledge-sponsor-head sponsor-head">
-          <h3 className="page-header inflate"> Knowledge Partner </h3>
-          <div className="row">
-            <div className="card col-md-6 col-xl-12 knowledge-sponsor">
-              <div className="card-content sponsor-view" data-toggle="modal" data-target=".AAIWay" id="#AAI-Way">
-                <div className="card-img PartnerLogo">
-                  <img className="card-img-top" src={PP_AAIW} alt="AAI Way" title="AAI Way"/>
-                </div>
-                <div className="card-body">
-                  <div className="text-center">
-                    <h4 className="card-title">AAI Way</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="knowledge-sponsor-head sponsor-head">
+            <Center>
+              <Heading size="lg">
+                Knowledge Partner
+              </Heading>
+            </Center>
+            <br/>
+            <Center>
+              <Box boxShadow="2xl" borderRadius="lg" p={4}>
+                <br/><br/><br/>
+                <Image src={PP_AAIW} alt="AAI Way" width="250px" title="AAI Way" objectFit="cover"/>
+                <br/><br/><br/>
+                <Center>
+                  <Heading size="md">AAI Way</Heading>
+                </Center>
+              </Box>
+            </Center>
           </div>
-        </div>
+        </Flex>
+        <br/>
+        <br/>
         <div className="Past-Sponsors past-sponsor-head sponsor-head">
-          <h3 className="page-header inflate"> Past Sponsors </h3>
+          <Heading>
+            Past Sponsors
+          </Heading>
           <div className="row past-sponsor-list">
 
             <div className="text-center past-sponsor col-sm-6 col-lg-4 col-xl-3" title="Yellow Diamond">
