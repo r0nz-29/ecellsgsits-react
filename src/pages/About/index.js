@@ -20,11 +20,7 @@ export default function About() {
             About Us
           </Heading>
         </Center>
-        <Divider my={4} style={{
-          border: 0,
-          height: "1px",
-          backgroundImage: "linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0) 100%)",
-        }}/>
+        <FadingDivider/>
         <DummyText/>
         <br/>
         <br/>
@@ -82,6 +78,16 @@ export default function About() {
         <br/>
       </Container>
     </Box>
+  );
+}
+
+export function FadingDivider() {
+  return (
+    <Divider my={4} style={{
+      border: 0,
+      height: "1px",
+      backgroundImage: "linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0) 100%)",
+    }}/>
   );
 }
 
