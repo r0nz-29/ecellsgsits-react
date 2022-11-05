@@ -59,3 +59,7 @@ export const PP_SG = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667591
 export const PP_SW = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667591171/assets/PP_SW_egpepu.jpg";
 export const PP_SM = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667591171/assets/PP_SM_ocztqv.png";
 export const PP_VI = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667591169/assets/PP_VI_sldnyb.jpg";
+
+export const BACKGROUND_2021 = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667594736/assets/background_njzo02.png";
+export const BACKGROUND_2021_MOBILE = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667594740/assets/mobile-background_ejajby.png";
+export const FOOTER_2021 = "https://res.cloudinary.com/dmmt1w6md/image/upload/v1667595275/assets/footer-bg_tlwhk6.png";

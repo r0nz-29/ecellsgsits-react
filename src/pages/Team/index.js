@@ -1,4 +1,3 @@
-import "./index.css";
 import {departments, OC, storeHeads} from "./data";
 import React, {useEffect} from "react";
 
@@ -13,7 +12,8 @@ export default function Team() {
       <div className="outer-box">
         <div className="heading">
           <h2 className="text-center">
-            <span className="typewriter"><span style={{overflowY: "hidden", scrollbarColor: 'transparent'}}>Team E-Cell</span></span>
+            <span className="typewriter"><span
+              style={{overflowY: "hidden", scrollbarColor: "transparent"}}>Team E-Cell</span></span>
           </h2>
           <hr/>
         </div>

@@ -13,7 +13,7 @@ export const OverallCoordinators = [
   },
 ];
 
-export const ADDRESS = "23, Nehru Park Road, Vallabh Nagar Indore, Madhya Pradesh,";
+export const ADDRESS = "23, Nehru Park Road, Vallabh Nagar Indore, Madhya Pradesh, (452003) India";
 
 export const highlights = [
   {

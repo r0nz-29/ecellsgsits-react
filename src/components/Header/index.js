@@ -1,61 +1,101 @@
 import {ECELL_LOGO} from "../../Utils/images";
-import {Link} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
+import Header2021 from "../../pages/Esummit2021/components/Header";
+import {Box, Button, HStack, IconButton, Image, Spacer} from "@chakra-ui/react";
+import {navs, socials} from "./data";
+import Headroom from "react-headroom";
+import {useEffect, useState} from "react";
 
 export default function Header() {
+  const {pathname} = useLocation();
+
+  if (pathname.includes("esummit")) {
+    return <Header2021/>;
+  } else {
+    return <NormalHeader/>;
+  }
+}
+
+export function NormalHeader() {
+  const {pathname} = useLocation();
+  const [headerBg, setHeaderBg] = useState("transparent");
+
+  function listener() {
+    if (window.scrollY > 20) {
+      setHeaderBg("black");
+    } else {
+      setHeaderBg("transparent");
+    }
+  }
+
+  useEffect(() => {
+    if (pathname !== "/") {
+      setHeaderBg("black");
+      return;
+    }
+    setHeaderBg("transparent");
+    if (pathname === "/") window.addEventListener("scroll", listener);
+
+    return () => {
+      window.removeEventListener("scroll", listener);
+    };
+  }, [pathname]);
+
   return (
-    <div className="container" style={{fontFamily: "'Lato', sans-serif", fontSize: "medium"}}>
-      <nav className="navbar fixed-top navbar-expand-lg navbar-dark">
-        <Link to="/"><img src={ECELL_LOGO} style={{height: "40px", width: "40px"}}/></Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    <Headroom>
+      <Box bg={headerBg} color="white" position="fixed" width="100%" p={2} px={4}>
+        <HStack justify="space-between">
+          <Image src={ECELL_LOGO} width="40px"/>
+          <Spacer/>
+          {navs.slice(0, 2).map((nav, i) => {
+            return (
+              <Nav key={i} nav={nav}/>
+            );
+          })}
+          {navs.slice(2, navs.length).map((nav, i) => {
+            return (
+              <Nav key={i} nav={nav}/>
+            );
+          })}
+          <Spacer/>
+          <Socials/>
+        </HStack>
+      </Box>
+    </Headroom>
+  );
+}
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav m-auto main-list">
-            <li className="nav-item">
-              <Link className="nav-link" to="/">HOME<span className="sr-only">(current)</span></Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/about">ABOUT</Link>
-            </li>
-            <li className="nav-item dropdown">
-              <Link className="nav-link dropdown-toggle" data-toggle="dropdown" to="/events">EVENTS</Link>
-              <div className="dropdown-menu">
-                <Link className="dropdown-item nav-link" to="/Aarambh">AARAMBH</Link>
-                <Link className="dropdown-item nav-link" to="/events">EVENTS ARCHIVES</Link>
-              </div>
-            </li>
+export function Socials({spaced = false}) {
+  return socials.map((social, i) => {
+    return (
+      <IconButton
+        key={i}
+        icon={<social.icon/>}
+        borderRadius="100%"
+        color={social.color}
+        aria-label={social.name}
+        mr={spaced ? 2 : 0}
+      />
+    );
+  });
+}
 
-            <li className="nav-item">
-              <Link className="nav-link" to="/volunteer">VOLUNTEER</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/esummit">E-SUMMIT</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/sponsors">SPONSORS</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/team">TEAM</Link>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/#contact">CONTACT</a>
-            </li>
-          </ul>
-          <ul className="nav navbar-nav navbar-right">
-            <Link to="linkedin-connect" target="_blank" className="icon-button linkedin"><i
-              className="icon-linkedin fab fa-linkedin-in"></i><span></span></Link>
-            <Link to="facebook-connect" target="_blank" className="icon-button facebook"><i
-              className="icon-facebook fab fa-facebook-f"></i><span></span></Link>
-            <Link to="youtube-connect" target="_blank" className="icon-button youtube"><i
-              className="icon-youtube fab fa-youtube"></i><span></span></Link>
-            <Link to="instagram-connect" target="_blank" className="icon-button instagram"><i
-              className="icon-instagram fab fa-instagram"></i><span></span></Link>
-          </ul>
-        </div>
+function Nav({nav}) {
+  const navigate = useNavigate();
 
-      </nav>
-    </div>
+  function redirect(e) {
+    navigate(nav[1]);
+  }
+
+  return (
+    <Button
+      fontSize="lg"
+      _hover={{bg: "rgba(0, 0, 0, 0.3)"}}
+      _active={{bg: "rgba(0, 0, 0, 0.8)"}}
+      variant="ghost"
+      onClick={redirect}
+    >
+      {nav[0]}
+    </Button>
   );
 }

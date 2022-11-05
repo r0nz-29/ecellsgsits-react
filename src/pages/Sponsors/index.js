@@ -1,5 +1,4 @@
 import {useEffect} from "react";
-import "./index.css";
 import {
   P_SSI,
   PP_AAIW,

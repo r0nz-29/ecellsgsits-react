@@ -1,129 +1,129 @@
 import {cards, director, faculty, founders} from "./data";
-import "./index.css";
-import {Col, Container, Row} from "react-bootstrap";
 import {useEffect} from "react";
+import {Box, Center, Container, Divider, Flex, Heading, Image, Text} from "@chakra-ui/react";
+import "@fontsource/noticia-text";
 
 export default function About() {
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <>
+    <Box>
       <br/>
       <br/>
       <br/>
-      <Container>
-        <div>
-          <h2 className="text-center pt-3">
-            <strong>About Us</strong>
-          </h2>
-          <hr/>
-          <Text/>
-        </div>
+      <Container maxW="container.xl">
+        <Center>
+          <Heading>
+            About Us
+          </Heading>
+        </Center>
+        <Divider my={4} style={{
+          border: 0,
+          height: "1px",
+          backgroundImage: "linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0,0,0,0.75) 50%, rgba(0,0,0,0) 100%)",
+        }}/>
+        <DummyText/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <Center>
+          <Heading>
+            Evoke! Enterprise! Expand!
+          </Heading>
+        </Center>
+        <br/>
+        <br/>
+        <Flex gap={6}>
+          {cards.map((card, i) => (
+            <AgendaCard card={card} key={i}/>
+          ))}
+        </Flex>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <Center>
+          <Heading>
+            Our Mentors
+          </Heading>
+        </Center>
+        <br/>
+        <Center>
+          <PersonCard person={director} width="sm"/>
+        </Center>
+        <br/>
+        <br/>
+        <Flex gap={4} alignItems="stretch">
+          {faculty.map((faculty, i) => (
+            <PersonCard person={faculty} key={i}/>
+          ))}
+        </Flex>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <Center>
+          <Heading>
+            Our Founders
+          </Heading>
+        </Center>
+        <br/>
+        <br/>
+        <Flex gap={4} justify="space-evenly" alignItems="stretch">
+          {founders.map((founder, i) => (
+            <PersonCard person={founder} key={i} width="xs"/>
+          ))}
+        </Flex>
+        <br/>
+        <br/>
       </Container>
-      <br/>
-      <section id="team">
-        <div className="my-3 py-5 text-center">
-          <div className="row mb-5">
-            <div className="col">
-              <h3 className="head text-center font-weight-bold">
-                Evoke! Enterprise! Expand!
-              </h3>
-              <br/>
-            </div>
-          </div>
-          <div className="container">
-            <div className="row">
-              {cards.map((card, i) => <AgendaCard card={card} key={i}/>)}
-            </div>
-          </div>
-        </div>
-      </section>
-      <br/>
-      <section>
-        <br/><br/>
-        <h3 className="head text-center">
-          <strong>Our Mentors</strong>
-        </h3>
-        <br/>
-        <Row className="justify-content-center">
-          <Col xs={2}>
-            <PersonCard person={director}/>
-          </Col>
-        </Row>
-        <br/>
-        <br/>
-        <Container>
-          <Row className="justify-content-center align-items-stretch">
-            {faculty.map((faculty, i) => (
-              <Col key={i} xs={3}>
-                <PersonCard person={faculty}/>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-      <section>
-        <br/>
-        <br/>
-        <h3 className="head text-center">
-          <strong>Our Founders</strong>
-        </h3>
-        <br/>
-        <Container>
-          <Row className="justify-content-center">
-            {founders.map((founder, i) => (
-              <Col key={i} xs={4}>
-                <PersonCard person={founder} />
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
-      <br/>
-      <br/>
-    </>
+    </Box>
   );
 }
 
 function AgendaCard({card}) {
   return (
-    <div className="col-lg-4 col-md-6" style={{padding: "1em"}}>
-      <div className="card" id="e2">
-        <div className="card-body">
-          <img src={card.img} alt="bar graphs on a palm"
-               className="img-thumbnail rounded-circle"
-               style={{
-                 height: "150px",
-                 width: "150px",
-                 marginBottom: "1.60em",
-                 backgroundColor: "rgb(13, 116, 116)",
-               }}/>
-          <h2>{card.title}</h2>
-          <h5 id="text-card">{card.h5}</h5>
-          <p id="text-card">{card.p}</p>
-        </div>
-      </div>
-    </div>
+    <Box boxShadow="dark-lg" borderRadius="lg" p={4}>
+      <Image
+        src={card.img}
+        height="150px"
+        width="150px"
+        marginBottom="1.60em"
+        backgroundColor="rgb(13, 116, 116)"
+      />
+      <Center>
+        <Heading size="lg">{card.title}</Heading>
+      </Center>
+      <Center my={2}>
+        <Heading size="sm">{card.h5}</Heading>
+      </Center>
+      <Center>
+        <Text align="center">{card.p}</Text>
+      </Center>
+    </Box>
   );
 }
 
-function PersonCard({person}) {
+function PersonCard({person, ...props}) {
   return (
-    <div className="card" style={{height: '100%'}}>
-      <img className="card-img-top" src={person.img} alt={person.name} title={person.name}/>
-      <div className="card-body">
-        <h5 className="card-title">{person.name}</h5>
-        <p className="card-text">{person.line}</p>
-      </div>
-    </div>
+    <Box minHeight="510px" borderRadius="lg" boxShadow="2xl" {...props}>
+      <Image borderTopRadius="lg" objectFit="cover" height="340px" src={person.img} alt={person.name}
+             title={person.name}/>
+      <Box p={4}>
+        <Heading size="md" mb={3}>{person.name}</Heading>
+        <Text>{person.line}</Text>
+      </Box>
+    </Box>
   );
 }
 
-function Text() {
+function DummyText() {
   return (
-    <>
+    <p align="justify">
       <strong>E-Cell SGSITS</strong>, Indore officially began on 17 March 2015. Our Entrepreneurship Cell is a
       non-profit organization run by
       students of SGSITS with the aim of manifesting entrepreneurship spirit of youth.
@@ -146,16 +146,16 @@ function Text() {
         sessions, competitions, conferences etc. with E-Cell, through its activities and competitions, has
         served as the guiding torch to many individuals to start their own ventures.
         <br/><br/>
-        <strong>VISION</strong>
-        is to bring a new revolution in Social Entrepreneurship by awakening the entrepreneur within
+        <strong>VISION</strong> is to bring a new revolution in Social Entrepreneurship by awakening the entrepreneur
+        within
         every individual. We provide a platform to the crowd to help them unveil the potential they
         have. to promote start-ups among the students, to build an exhaustive resource pool to aid
         potential student entrepreneur, to motivate the students to come up with feasible and pragmatic
         business plans.
         <br/><br/>
-        <strong>MISSION</strong>
-        is to be a major E-Cell in central India, i.e., a leading incubation center in upcoming years
+        <strong>MISSION</strong> is to be a major E-Cell in central India, i.e., a leading incubation center in upcoming
+        years
         to develop a major center of Social Entrepreneurship.
-      </p></>
+      </p></p>
   );
 }
