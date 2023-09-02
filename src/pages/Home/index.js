@@ -1,6 +1,7 @@
 import {INTRO_VIDEO} from "../../Utils/images";
 import {ADDRESS, highlights, OverallCoordinators} from "./data";
 import {useEffect} from "react";
+import './footer.css'
 import {
   Box,
   Button,
@@ -51,7 +52,7 @@ export default function Home() {
 
 function Contact() {
   return (
-    <Box bg="black" borderRadius="sm" m={8} boxShadow="dark-lg">
+    <Box bg="black" borderRadius="sm" m={8} boxShadow="dark-lg" >
       <Stack alignItems="stretch" direction="row">
         <Box color="white" p={8} minW="40vw">
           <Heading>

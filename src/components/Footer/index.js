@@ -1,6 +1,7 @@
 import {Box, Center, Container, Flex, Heading, Link, Text, VStack} from "@chakra-ui/react";
 import {footer} from "./data";
 
+
 export default function Footer() {
   return (
     <Box bg="black" p={4}>
