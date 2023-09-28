@@ -1,23 +1,23 @@
-import {AaS, AF, AS, AST, AT, AU, BS, DS, JA, KJ, MA, MG, PV, RaS, SG, ShM, VY, YaS, YS} from "../../Utils/images";
+import {amrita, aahana, avinash, anirudh, hardik, nishant, shruti, mohit, shreya, harshit, kushal, suman, aryan, jayesh, divyansh, akshat, rachit, aditya_c, paridhi, muskan, harsh, siddhi, gautam, aditya_b, aman, kanak, amol} from "../../Utils/images";
 
 export const OC = [
   {
-    img: KJ,
-    name: "Kratika Jain",
+    img: amrita,
+    name: "Amrita Singh",
     post: "Overall Coordinator",
-    linkedin: "https://www.linkedin.com/in/iamkratikajain",
+    linkedin: "https://www.linkedin.com/in/amritasingh1260/",
   },
   {
-    img: ShM,
-    name: "Shreya Maheshwari",
+    img: aahana,
+    name: "Aahana Saklecha",
     post: "Overall Coordinator",
-    linkedin: "https://www.linkedin.com/in/shreyamaheshwari12",
+    linkedin: "https://www.linkedin.com/in/aahana-saklecha-92223a1b1/",
   },
   {
-    img: YS,
-    name: "Yash Soni",
+    img: avinash,
+    name: "Avinash Singh Thakur",
     post: "Overall Coordinator",
-    linkedin: "https://www.linkedin.com/in/yashsoni786",
+    linkedin: "https://www.linkedin.com/in/avinash-singh-thakur-b95885135/",
   },
 ];
 
@@ -26,44 +26,44 @@ export const departments = [
     department: "Design",
     heads: [
       {
-        img: AT,
-        name: "Aryan Tiwari",
+        img: anirudh,
+        name: "Anirudh Singh Chouhan",
         post: "Head, Design",
-        linkedin: "https://www.linkedin.com/in/aryan-tiwari-368050200",
-      },
-      {
-        img: BS,
-        name: "Bhakti Shirwadkar",
-        post: "Head, Design",
-        linkedin: "https://www.linkedin.com/in/bhakti-shirwadkar-660246207",
-      },
+        linkedin: "https://www.linkedin.com/in/anirudh-singh-chouhan-63b339223/",
+      }
     ],
   },
   {
     department: "Marketing",
     heads: [
       {
-        img: MA,
-        name: "Manisha Ahuja",
+        img: hardik,
+        name: "Hardik Lathi",
         post: "Head, Marketing",
-        linkedin: "https://www.linkedin.com/in/manisha-ahuja-6b295a20a",
+        linkedin: "https://www.linkedin.com/in/hardik-lathi-387935221/",
       },
+      {
+        img: nishant,
+        name: "Nishant Tiwari",
+        post: "Head, Marketing",
+        linkedin: "https://www.linkedin.com/in/nishant-tiwari-b44759253",
+      }
     ],
   },
   {
     department: "Events",
     heads: [
       {
-        img: AS,
-        name: "Amrita Singh",
+        img: shruti,
+        name: "Shruti Soni",
         post: "Head, Events",
-        linkedin: "https://www.linkedin.com/in/amritasingh1260/",
+        linkedin: "https://www.linkedin.com/in/shruti-soni-b15008264/",
       },
       {
-        img: YaS,
-        name: "Yashraj Solanki",
+        img: mohit,
+        name: "Mohit Mamtani",
         post: "Head, Events",
-        linkedin: "https://www.linkedin.com/in/yashraj-solanki-9a3274213/",
+        linkedin: "https://www.linkedin.com/in/mohit-mamtani-b47097229/",
       },
     ],
   },
@@ -71,27 +71,33 @@ export const departments = [
     department: "Public Relations",
     heads: [
       {
-        img: AF,
-        name: "Aniket Fagnia",
+        img: shreya,
+        name: "Shreya Jain",
         post: "Head, Public Relations",
-        linkedin: "https://www.linkedin.com/in/aniket-fagnia-721751185/",
+        linkedin: "https://www.linkedin.com/in/shreya-jain-107a60238/",
       },
       {
-        img: SG,
-        name: "Swayam Gaba",
+        img: harshit,
+        name: "Harshit Khandelwal",
         post: "Head, Public Relations",
-        linkedin: "https://www.linkedin.com/in/swayam-gaba-7b80ab20b/",
+        linkedin: "https://www.linkedin.com/in/harshitkhandelwall/",
       },
+      {
+        img: kushal,
+        name: "Kushal Malhotra",
+        post: "Head, Public Relations",
+        linkedin: "https://www.linkedin.com/in/kushal-malhotra-208b56266/",
+      }
     ],
   },
   {
     department: "Web Development",
     heads: [
       {
-        img: RaS,
-        name: "Raunit Shrivastava",
+        img: suman,
+        name: "Suman Debnath",
         post: "Head, Web Development",
-        linkedin: "https://www.linkedin.com/in/raunitshrivastava29/",
+        linkedin: "https://www.linkedin.com/in/suman-debnath6/",
       },
     ],
   },
@@ -99,69 +105,122 @@ export const departments = [
     department: "External Affairs",
     heads: [
       {
-        img: AaS,
-        name: "Aahana Saklecha",
+        img: aryan,
+        name: "Aryan Sant",
         post: "Head, External Affairs",
-        linkedin: "https://www.linkedin.com/in/aahana-saklecha-92223a1b1/",
+        linkedin: "https://www.linkedin.com/in/aryan-sant-658790228/",
       },
       {
-        img: JA,
-        name: "Jayesh Agrawal",
+        img: jayesh,
+        name: "Jayesh Mulchandani",
         post: "Head, External Affairs",
-        linkedin: "https://www.linkedin.com/in/jayesh-agarwal-b50b82189/",
+        linkedin: "https://www.linkedin.com/in/jayesh-mulchadani-19a0bb225/",
       },
+      {
+        img: divyansh,
+        name: "Divyansh Jain",
+        post: "Head, External Affairs",
+        linkedin: "https://www.linkedin.com/in/divyansh-jain-44552924a/",
+      }
     ],
   },
   {
     department: "Finance",
     heads: [
       {
-        img: MG,
-        name: "Mihir Gangrade",
+        img: akshat,
+        name: "Akshat Banthia",
         post: "Head, Finance",
-        linkedin: "https://www.linkedin.com/in/mihir-gangrade-854b7a212/",
+        linkedin: "https://www.linkedin.com/in/akshat-banthia-b08230215/",
+      },
+      {
+        img: rachit,
+        name: "Rachit Nigam",
+        post: "Head, Finance",
+        linkedin: "https://www.linkedin.com/in/rachit-nigam-604940222/",
+      }
+    ],
+  },
+  {
+    department: "Startup Development",
+    heads: [
+      {
+        img: aditya_c,
+        name: "Aditya Chandil",
+        post: "Head, Startup Development",
+        linkedin: "https://www.linkedin.com/in/aditya-chandil-625ab5205/",
+      },
+      {
+        img: paridhi,
+        name: "Paridhi Pandey",
+        post: "Head, Startup Development",
+        linkedin: "https://www.linkedin.com/in/paridhi-pandey-66bb30266",
       },
     ],
   },
   {
-    department: "Startup Development and Alumni Networking",
+    department: "Alumni Relations",
     heads: [
       {
-        img: PV,
-        name: "Priyanshu Vaidya",
-        post: "Head, Startup Development and Alumni Networking",
-        linkedin: "https://www.linkedin.com/in/priyanshu-vaidya-3273201b7/",
+        img: muskan,
+        name: "Muskan Gupta",
+        post: "Head, Alumni Relations",
+        linkedin: "https://www.linkedin.com/in/muskan-gupta21/",
       },
       {
-        img: DS,
-        name: "Dhruv Singhal",
-        post: "Head, Startup Development and Alumni Networking",
-        linkedin: "https://www.linkedin.com/in/dhruv-singhal-32ab07206/",
+        img: harsh,
+        name: "Harsh Patel",
+        post: "Head, Alumni Relations",
+        linkedin: "https://www.linkedin.com/in/harsh-patel-88980b224/",
       },
     ],
-  },
+  }
 ];
 
 export const storeHeads = [
   {
     title: "Chief Design Officer",
-    name: "Varun Yadav",
-    img: VY,
+    name: "Aman Raibole",
+    img: aman,
     post: "CDO, STOR-E",
-    linkedin: "https://www.linkedin.com/in/varunyadav01/",
+    linkedin: "https://www.linkedin.com/in/aman-raibole-022b66225/",
   },
   {
     title: "Chief Finance Officer",
-    name: "Avinash Singh Thakur",
-    img: AST,
+    name: "Kanak Bhatt",
+    img: kanak,
     post: "CFO, STOR-E",
-    linkedin: "https://www.linkedin.com/in/avinash-singh-thakur-b95885135/",
+    linkedin: "https://www.linkedin.com/in/kanakbhatt450/",
   },
   {
     title: "Chief Marketing Officer",
-    name: "Aditya Upadhyay",
-    img: AU,
+    name: "Amol Sharma",
+    img: amol,
     post: "CMO, STOR-E",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/amol-sharma-9347a0225/",
+  },
+];
+
+export const Coordinators = [
+  {
+    title: "Events Co-Ordinator",
+    name: "Siddhi Jain",
+    img: siddhi,
+    post: "Events Co-Ordinator",
+    linkedin: "https://www.linkedin.com/in/siddhi-jain-b22439266/",
+  },
+  {
+    title: "Chief Finance Officer",
+    name: "Gautam Gohe",
+    img: gautam,
+    post: "CFO, STOR-E",
+    linkedin: "https://www.linkedin.com/in/gautam-gohe-228835180/",
+  },
+  {
+    title: "Chief Marketing Officer",
+    name: "Amol Sharma",
+    img: amol,
+    post: "CMO, STOR-E",
+    linkedin: "https://www.linkedin.com/in/amol-sharma-9347a0225/",
   },
 ];
